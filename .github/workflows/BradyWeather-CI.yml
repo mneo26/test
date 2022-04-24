@@ -21,7 +21,7 @@ jobs:
           run: dotnet restore
         - name: Build app
           run: |
-            cd "..\Src\Presentation\BradyWeather.Blazor.Server"
+            cd "**\Src\Presentation\BradyWeather.Blazor.Server"
             dotnet build --configuration Release --no-restore
             dotnet publish -c Release -o "../Src/Presentation/BradyWeather.Blazor.Server" -r linux-x64 --self-contained true /p:UseAppHost=true
         - uses: azure/webapps-deploy@v2
