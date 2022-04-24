@@ -1,6 +1,6 @@
 name: Bradly Weather CI 
 
-on: [push,pull_request]
+on: [pull_request]
 
 env: 
   DOTNET_CORE_VERSION: 3.1
