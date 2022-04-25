@@ -37,9 +37,6 @@
       }
     }
   },
-  "variables": {
-    "standardPlanMaxAdditionalSlots": 1
-  },
   "resources": [
     {
       "apiVersion": "2020-06-01",
@@ -67,10 +64,10 @@
         "displayName": "WebApp"
       },
       "properties": {
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
       ]
     },
     {
@@ -84,7 +81,7 @@
         "displayName": "WebAppSlots"
       },
       "properties": {
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
