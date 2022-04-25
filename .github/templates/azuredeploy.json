@@ -38,8 +38,7 @@
     }
   },
   "variables": {
-    "standardPlanMaxAdditionalSlots": 1,
-    "webAppPortalName": "[concat(parameters('baseResourceName'), 'Portal')]",
+    "standardPlanMaxAdditionalSlots": 1
   },
   "resources": [
     {
